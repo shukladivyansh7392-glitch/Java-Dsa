@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JAVA DSA.iml" filepath="$PROJECT_DIR$/JAVA DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCFBonusModule/JavaCFBonusModule.iml" filepath="$PROJECT_DIR$/JavaCFBonusModule/JavaCFBonusModule.iml" />
     </modules>
   </component>
 </project>

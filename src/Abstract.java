@@ -1,7 +1,7 @@
-public class DEMO {
+public class Abstract {
    public static void main(String[] args){
 
-       Car car = new ElectricCar();
+       car car = new fuelCar();
        car.start();
        car.accelerate();
        car.brake();
@@ -10,6 +10,7 @@ public class DEMO {
 
 abstract class car{
     void start(){
+
         System.out.println("Car is started");
     }
     abstract void accelerate();
@@ -19,28 +20,28 @@ abstract class car{
 class fuelCar extends car{
 
     @Override
-    void eccelerate(){
+    void accelerate() {
         System.out.println("fuel car is a accelerating");
 
+    }
         @Override
-        void brake;(){
+        void brake()
+        {
             System.out.println("fuel car is a stopping");
         }
     }
 
-    class electricCar extends car{
-
-
-
+    class ElectricCar extends car{
 
         @Override
-        void eccelerate(){
+        void accelerate() {
             System.out.println("electric car is a accelerating");
 
+        }
             @Override
             void brake(){
                 System.out.println("electric car is a stopping");
             }
     }
-}
+//}
 
