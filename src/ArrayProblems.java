@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class ArrayProblems {
     static double getAverage(int[] arr) {
@@ -97,6 +98,7 @@ static int getMaximum(int arr[]){
 
            }
        }
+        return 0;
     }
 //            if (arr[i+1] > arr[i]){
 //                //toh sab kuchh theek hai
@@ -107,16 +109,50 @@ static int getMaximum(int arr[]){
 //                return arr[i+1];
 //            }
 
-        //jis case me main loop se bahar ajaunga
+
+    //jis case me main loop se bahar ajaunga
+
+
+
+
+    //Homework Questions_________________________________!
+    //Que1.Swap Alternate Elements in an array
+   public static void swapArray(int arr[]) {
+        for (int i = 0; i < arr.length; i += 2) {
+            if (i + 1 < arr.length) {
+
+                int temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
+        }
+    }
+    //Question2. Print Array Intersection Element
+
+
 
     static void main(){
+        //Example:1. Even Array
+        int arr[] = {1,2,3,4,5,6};
+        System.out.println("Origin Even Array :" + Arrays.toString(arr));
+        swapArray(arr);
+        System.out.println("Swapped Even Array :" + Arrays.toString(arr));
+
+        System.out.println("----------------------------------------");
+
+        //Example:2. Odd Array
+        int Oddarr[] = {1,2,3,4,5};
+        System.out.println("Origin Odd Array" + Arrays.toString(Oddarr));
+        swapArray(Oddarr);
+        System.out.println("Swapped Odd Array" + Arrays.toString(Oddarr));
+
 //          int arr[] = {1,2,5,4,9};
 //        System.out.println(getUnsortedElement(arr));
 
-        int arr[] = {0,1,1,0,1,0,1,0};
-        int ans[] = getZeroOneCount(arr);
-        System.out.println("zeroCount = " +ans[0]);
-        System.out.println("oneCount = " +ans[1]);
+//        int arr[] = {0,1,1,0,1,0,1,0};
+//        int ans[] = getZeroOneCount(arr);
+//        System.out.println("zeroCount = " +ans[0]);
+//        System.out.println("oneCount = " +ans[1]);
 
 
 //        int arr[] = {1,-3,-5, -7,9};
