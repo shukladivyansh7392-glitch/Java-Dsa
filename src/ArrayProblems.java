@@ -44,9 +44,11 @@ static int getMaximum(int arr[]){
         int maxi = arr[0];
 
         for(int i=0; i<arr.length; i++){
-            if(arr[i]>maxi){
-                maxi = arr[i];
-            }
+
+            maxi = Math.max(maxi,arr[i]);
+//            if(arr[i]>maxi){
+//                maxi = arr[i];
+//            }
         }
         return maxi;
          //jab main vaha pahuchunga, toh poora array compare ho chuka hoga
@@ -56,47 +58,45 @@ static int getMaximum(int arr[]){
 //Homework -> Math.max()
 
     static int[] getPosNegSum(int arr[]){
-        int posSum = 0;
-        int negSum = 0;
+      int posSum = 0;
+      int negSum = 0;
 
-        for(int i=0; i<arr.length; i++){
-            if(arr[i] > 0){
-                //num is positive
-                posSum = posSum + arr[i];
-            }
-            else{
-                //num is negative
-                negSum = negSum + arr[i];
-            }
-        }
-        int ans[] = {posSum, negSum};
-        return ans;
+      for(int i=0; i<arr.length; i++){
+          if(arr[i] > 0){
+              //if number is positive
+              posSum = posSum + arr[i];
+          }
+          else{
+              //if number is negative
+              negSum = negSum + arr[i];
+          }
+      }
+      int ans[] = {posSum, negSum};
+      return ans;
     }
 
     static int[] getZeroOneCount(int arr[]){
-        int zeroCount = 0;
-        int oneCount = 0;
+       int zeroCount = 0;
+       int oneCount = 0;
 
-        for(int i=0; i<arr.length; i++){
-            if(arr[i] == 0){
-                zeroCount++;
-            }
-            else{
-                //oneCount
-                oneCount++;
-            }
-        }
-        int ans[] = {zeroCount, oneCount};
-        return ans;
+       for(int i=0; i<arr.length; i++){
+           if(arr[i] == 0){
+               zeroCount++;
+           }
+           else{
+               oneCount++;
+           }
+       }
+       int ans[] = {oneCount, zeroCount};
+       return ans;
     }
 
     static int getUnsortedElement(int arr[]){
-        for(int i=0; i<arr.length; i++) {
-            if (arr[i + 1] <= arr[i]) {
-                return arr[i + 1];
-            }
-        }
-        return -1;
+       for(int i=0; i<arr.length; i++){
+           if(arr[i+1] > arr[i]){
+
+           }
+       }
     }
 //            if (arr[i+1] > arr[i]){
 //                //toh sab kuchh theek hai
@@ -113,17 +113,20 @@ static int getMaximum(int arr[]){
 //          int arr[] = {1,2,5,4,9};
 //        System.out.println(getUnsortedElement(arr));
 
-//        int arr[] = {0,1,1,0,1,0,1,0};
-//        int ans[] = getZeroOneCount(arr);
-//        System.out.println("zeroCount = " +ans[0]);
-//        System.out.println("oneCount = " +ans[1]);
+        int arr[] = {0,1,1,0,1,0,1,0};
+        int ans[] = getZeroOneCount(arr);
+        System.out.println("zeroCount = " +ans[0]);
+        System.out.println("oneCount = " +ans[1]);
+
+
 //        int arr[] = {1,-3,-5, -7,9};
 //        int ans[] = getPosNegSum(arr);
 //        System.out.println("Positive Sum = " +ans[0]);
 //        System.out.println("Negative Sum = " +ans[1]);
 
-        int arr[] = {2,5,3,1,7};
-        System.out.println(getMaximum());
+//        int arr[] = {2,5,3,1,7};
+//        System.out.println(getMaximum(arr));
+
 //        int arr[] = {1,3,5,7,9};
 //        boolean ans = findTarget(arr,9);
 //        System.out.println(ans);
