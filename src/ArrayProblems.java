@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.HashSet;
 
 public class ArrayProblems {
     static double getAverage(int[] arr) {
@@ -128,23 +129,39 @@ static int getMaximum(int arr[]){
         }
     }
     //Question2. Print Array Intersection Element
+    public static void ArrayIntersiction(int[] arr1, int[] arr2){
+        System.out.println("Intersection Elements :");
+        for(int i=0; i<arr1.length; i++){
+            for(int j=0; j<arr2.length; j++){
+                if(arr1[i] == arr2[j]){
+                    System.out.println(arr1[i]);
+                    break;
+                }
 
 
+            }
+        }
+    }
 
     static void main(){
+     int[] a = {10,20,30,40};
+        int[] b = {30,40,50,60};
+        ArrayIntersiction(a,b);
+
+
         //Example:1. Even Array
-        int arr[] = {1,2,3,4,5,6};
-        System.out.println("Origin Even Array :" + Arrays.toString(arr));
-        swapArray(arr);
-        System.out.println("Swapped Even Array :" + Arrays.toString(arr));
-
-        System.out.println("----------------------------------------");
-
-        //Example:2. Odd Array
-        int Oddarr[] = {1,2,3,4,5};
-        System.out.println("Origin Odd Array" + Arrays.toString(Oddarr));
-        swapArray(Oddarr);
-        System.out.println("Swapped Odd Array" + Arrays.toString(Oddarr));
+//        int arr[] = {1,2,3,4,5,6};
+//        System.out.println("Origin Even Array :" + Arrays.toString(arr));
+//        swapArray(arr);
+//        System.out.println("Swapped Even Array :" + Arrays.toString(arr));
+//
+//        System.out.println("----------------------------------------");
+//
+//        //Example:2. Odd Array
+//        int Oddarr[] = {1,2,3,4,5};
+//        System.out.println("Origin Odd Array" + Arrays.toString(Oddarr));
+//        swapArray(Oddarr);
+//        System.out.println("Swapped Odd Array" + Arrays.toString(Oddarr));
 
 //          int arr[] = {1,2,5,4,9};
 //        System.out.println(getUnsortedElement(arr));
