@@ -128,6 +128,7 @@ static int getMaximum(int arr[]){
             }
         }
     }
+
     //Question2. Print Array Intersection Element
     public static void ArrayIntersiction(int[] arr1, int[] arr2){
         System.out.println("Intersection Elements :");
