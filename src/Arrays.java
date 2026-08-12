@@ -4,18 +4,18 @@ import java.util.Scanner;
 public class Arrays {
     static void main() {
         int arr[][]= {{1,2,3}, {21,20,33}};
-        int minValue = arr [0][0];
-        //int maxValue = arr[0][0];
+        //int minValue = arr [0][0];
+        int maxValue = arr[0][0];
 
         for(int i=0; i<arr.length; i++){
             for(int j=0; j<arr[i].length; j++){
-                if(arr[i][j] < minValue){
+                if(arr[i][j] < maxValue){
                     //Update minValue
-                    minValue = arr[i][j];
+                    maxValue = arr[i][j];
                 }
             }
         }
-        System.out.println(minValue);
+        System.out.println("This is a max value : " + maxValue);
 
 //        for(int i=0; i<arr.length; i++){
 //            for(int j=0; j<arr[i].length; j++){

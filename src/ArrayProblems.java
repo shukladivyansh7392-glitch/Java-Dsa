@@ -33,7 +33,6 @@ public class ArrayProblems {
                 return true;
             }
         }
-
     //agar poora array travel ho chuka hai
     //and ek baar bhi target nahi mila
     //iska mtlb , target is not present in array
@@ -145,9 +144,9 @@ static int getMaximum(int arr[]){
     }
 
     static void main(){
-     int[] a = {10,20,30,40};
-        int[] b = {30,40,50,60};
-        ArrayIntersiction(a,b);
+//     int[] a = {10,20,30,40};
+//        int[] b = {30,40,50,60};
+//        ArrayIntersiction(a,b);
 
 
         //Example:1. Even Array
@@ -178,8 +177,8 @@ static int getMaximum(int arr[]){
 //        System.out.println("Positive Sum = " +ans[0]);
 //        System.out.println("Negative Sum = " +ans[1]);
 
-//        int arr[] = {2,5,3,1,7};
-//        System.out.println(getMaximum(arr));
+        int arr[] = {2,5,3,1,7};
+        System.out.println(getMaximum(arr));
 
 //        int arr[] = {1,3,5,7,9};
 //        boolean ans = findTarget(arr,9);
