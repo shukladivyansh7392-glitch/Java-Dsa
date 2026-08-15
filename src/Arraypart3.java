@@ -26,25 +26,25 @@ public class Arraypart3 {
 //        }
 //    }
 
-    public int missingNumber(int[] arr){
-        int xorSum = 0;
-
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        //xor with all the array elements.
-        for(int n: arr){
-
-            xorSum = xorSum ^ n;
-        }
-        //xor with all the element in the range.
-        int n = arr.length;
-        for(int i=0; i<=n; i++){
-            xorSum = xorSum ^ i;
-        }
-        //ans a jayega..
-        return xorSum;
-
-    }
+//    public int missingNumber(int[] arr){
+//        int xorSum = 0;
+//
+//        Scanner sc = new Scanner(System.in);
+//        int n = sc.nextInt();
+//        //xor with all the array elements.
+//        for(int n: arr){
+//
+//            xorSum = xorSum ^ n;
+//        }
+//        //xor with all the element in the range.
+//        int n = arr.length;
+//        for(int i=0; i<=n; i++){
+//            xorSum = xorSum ^ i;
+//        }
+//        //ans a jayega..
+//        return xorSum;
+//
+//    }
 
 
     public static void main(String[] args) {

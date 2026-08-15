@@ -149,7 +149,7 @@ static int getMaximum(int arr[]){
 //        ArrayIntersiction(a,b);
 
 
-        //Example:1. Even Array
+       // Example:1. Even Array
 //        int arr[] = {1,2,3,4,5,6};
 //        System.out.println("Origin Even Array :" + Arrays.toString(arr));
 //        swapArray(arr);
@@ -157,11 +157,11 @@ static int getMaximum(int arr[]){
 //
 //        System.out.println("----------------------------------------");
 //
-//        //Example:2. Odd Array
-//        int Oddarr[] = {1,2,3,4,5};
-//        System.out.println("Origin Odd Array" + Arrays.toString(Oddarr));
-//        swapArray(Oddarr);
-//        System.out.println("Swapped Odd Array" + Arrays.toString(Oddarr));
+        //Example:2. Odd Array
+        int Oddarr[] = {1,2,3,4,5};
+        System.out.println("Origin Odd Array" + Arrays.toString(Oddarr));
+        swapArray(Oddarr);
+        System.out.println("Swapped Odd Array" + Arrays.toString(Oddarr));
 
 //          int arr[] = {1,2,5,4,9};
 //        System.out.println(getUnsortedElement(arr));
@@ -177,8 +177,8 @@ static int getMaximum(int arr[]){
 //        System.out.println("Positive Sum = " +ans[0]);
 //        System.out.println("Negative Sum = " +ans[1]);
 
-        int arr[] = {2,5,3,1,7};
-        System.out.println(getMaximum(arr));
+//        int arr[] = {2,5,3,1,7};
+//        System.out.println(getMaximum(arr));
 
 //        int arr[] = {1,3,5,7,9};
 //        boolean ans = findTarget(arr,9);
