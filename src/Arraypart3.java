@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Arraypart3 {
 //    public static void sortArray(int[] nums) {
 //
@@ -26,28 +24,24 @@ public class Arraypart3 {
 //        }
 //    }
 
-//    public int missingNumber(int[] arr){
-//        int xorSum = 0;
-//
-//        Scanner sc = new Scanner(System.in);
-//        int n = sc.nextInt();
-//        //xor with all the array elements.
-//        for(int n: arr){
-//
-//            xorSum = xorSum ^ n;
-//        }
-//        //xor with all the element in the range.
-//        int n = arr.length;
-//        for(int i=0; i<=n; i++){
-//            xorSum = xorSum ^ i;
-//        }
-//        //ans a jayega..
-//        return xorSum;
-//
-//    }
 
-
+    static int findMissing(int[] arr, int n) {
+        System.out.println("Find Missing Element :-");
+        int xor = 0;
+        //xor 1 se n tak
+        for(int i = 0; i<=n; i++){
+            xor = xor ^ i;
+        }
+        //Xor Array ke Elemnts ka
+        for(int num: arr){
+            xor = xor ^ num;
+        }
+        return xor;
+    }
     public static void main(String[] args) {
+        int arr[] = {1, 2, 4, 5};
+        int n = 5;
+        System.out.println(findMissing(arr,n));
 
 //        int nums[] = {1, 0, 1, 1, 0, 0, 1};
 //        sortArray(nums);

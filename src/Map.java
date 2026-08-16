@@ -4,11 +4,11 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Map {
     static void main(String[] args) {
 
-        Integer arr[] = {5,1,7,2,8};
-        Arrays.sort(arr, new ReverseCmp());
-        for(int a: arr){
-            System.out.print(a + " ");
-        }
+//        Integer arr[] = {5,1,7,2,8};
+//        Arrays.sort(arr, new ReverseCmp());
+//        for(int a: arr){
+//            System.out.print(a + " ");
+//        }
 
 //        List<Student> students = new ArrayList<>();
 //

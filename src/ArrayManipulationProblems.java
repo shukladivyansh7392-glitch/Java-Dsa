@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class ArrayManipulationProblems {
@@ -176,8 +177,38 @@ public class ArrayManipulationProblems {
         return unionList;
     }
 
+    public static void reverse(int[] arr, int start, int end){
+        while (start < end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+
+            start++;
+            end--;
+        }
+    }
+    public static void rotateRight(int[] arr, int k){
+        System.out.println("Shift The Array by K position :- ");
+        int n = arr.length;
+        k = k % n;
+
+        //step 1: reverse complete array
+        reverse(arr, 0, n - 1);
+        //step 2: Reverse first k elements
+        reverse(arr, 0, k - 1);
+        //Step 3: Reverse Remaining Array
+        reverse(arr, k, n - 1);
+    }
 
       public static void main (String[] args) {
+
+        int[] arr = {1, 2, 3, 4, 5};
+        int k = 2;
+
+        rotateRight(arr, k);
+
+          System.out.println(Arrays.toString(arr));
+
 
 //        int[] arr1 = {1, 2, 2, 3, 5};
 //        int[] arr2 = {2, 3, 4, 4, 5, 6};

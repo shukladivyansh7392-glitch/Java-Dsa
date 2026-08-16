@@ -1,7 +1,4 @@
-
-import java.util.Scanner;
-
-public class Arrays {
+public class MyArrays {
     static void main() {
         int arr[][]= {{1,2,3}, {21,20,33}};
         //int minValue = arr [0][0];
@@ -177,9 +174,15 @@ public class Arrays {
 //            System.out.println(val);
         }
 
-    public static void sort(Integer[] arr, ReverseCmp reverseCmp) {
+//    public static void sort(Integer[] arr, ReverseCmp reverseCmp) {
+//
+//    }
+//
+//    public static boolean toString(int[] arr) {
+//    }
 
-    }
+//    public static boolean toString(int[] arr) {
+//    }
 
 //        //declaration
 //        int arr[];
