@@ -1,11 +1,11 @@
-public class Student implements Comparable<Student>{
+public class Students implements Comparable<Students>{
 
     public int age;
     public String name;
     public int weight;
 
 
-    public Student(int age, String name, int weight) {
+    public Students(int age, String name, int weight) {
         this.age = age;
         this.name = name;
         this.weight = weight;
@@ -48,7 +48,7 @@ public class Student implements Comparable<Student>{
     }
 
     @Override
-    public int compareTo(Student that) {
+    public int compareTo(Students that) {
         //this method is called for current object
         //we will define our sorting logic here
 

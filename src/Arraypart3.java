@@ -1,4 +1,5 @@
 import static java.util.Arrays.sort;
+import static java.util.Collections.max;
 
 public class Arraypart3 {
 //    public static void sortArray(int[] nums) {
@@ -68,12 +69,44 @@ public class Arraypart3 {
             }
         }
     }
-    public static void main(String[] args) {
-        int[] arr = {1, 0, 1, 0, 0, 1};
-        sort(arr);
-        for(int num: arr){
-            System.out.print(num + " ");
+
+    public static int findUniqueNumber(int[] arr){
+        int xorSum = 0;
+        for(int n: arr){
+            xorSum = xorSum ^ n;
         }
+        return xorSum;
+
+    }
+    public static int maxConsecutive(int[] arr){
+        int maxi = 0;
+        int count = 0;
+        for(int i = 0; i < arr.length; i++){
+           if(arr[i] == 1){
+               count++;
+               maxi = Math.max(maxi, count);
+           }
+           else{
+               count = 0;
+           }
+        }
+        return maxi;
+    }
+    public static void main(String[] args) {
+//        int[] fii = {1, 1, 0, 1, 1, 1, 0, 1, 1};
+//        System.out.println(maxConsecutive(fii));
+
+
+
+        int[] arr = {2, 5, 4, 5, 3, 3, 4};
+        int unique = findUniqueNumber(arr);
+        System.out.println("The unique number is : " + unique);
+
+//        int[] arr = {1, 0, 1, 0, 0, 1};
+//        sort(arr);
+//        for(int num: arr){
+//            System.out.print(num + " ");
+//        }
 
 //        int arr[] = {1, 2, 4, 5};
 //        int n = 5;
