@@ -1,9 +1,11 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
+import static java.nio.file.Files.find;
 import static java.util.Arrays.sort;
 import static java.util.Collections.max;
-
-public class Arraypart3 {
+public static class Arraypart3 {
 //    public static void sortArray(int[] nums) {
 //
 //
@@ -186,9 +188,38 @@ public class Arraypart3 {
         }
         return -1;
     }
-    public static void main(String[] args) {
-        int[] arr = {1, 7, 3, 6, 5, 6};
-        System.out.println("This Is Pivot  :-- " + findPivot(arr));
+
+    public static List<Integer> findDisappearedNumber(int[] arr) {
+        List<Integer> ans = new ArrayList<>();
+
+        //Marking
+        int n = arr.length;
+        for (int index = 0; index < n; index++) {
+            int value = Math.abs(arr[index]);
+            int position = value - 1;
+            //mark kardo ye position
+            if (arr[position] > 0) {
+                arr[position] = -arr[position];
+            }
+        }
+        //travel array and whenever you encounter a positive value, print the number at the same time
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > 0) {
+                int valueAtThisIndex = i + 1;
+                ans.add(valueAtThisIndex);
+            }
+        }
+        return ans;
+    }
+    }
+
+    public static void main(int[] args) {
+    int[] arr = {1, 4, 4, 5, 2, 2};
+    List<Integer> frr= Arraypart3.findDisappearedNumber(arr);
+
+
+//        int[] arr = {1, 7, 3, 6, 5, 6};
+//        System.out.println("This Is Pivot  :-- " + findPivot(arr));
 
 //        int[] arr = {2, 4, 6, 8, 7, 6, 8};
 //        System.out.println("The ReapetedElements :- " + reapitedElements(arr));
@@ -231,4 +262,6 @@ public class Arraypart3 {
 
 //        }
     }
+
+void main() {
 }
