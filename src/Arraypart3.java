@@ -212,10 +212,63 @@ public static class Arraypart3 {
         return ans;
     }
     }
+    public static List<Integer> rowSum(int[][] arr){
+    //implementation logic
+        List<Integer> result = new ArrayList<>();
+        int m = arr.length;
+        int n = arr[0].length;
+        //Traversal
+        for(int row = 0; row<m; row++){
+            //jaise hi mai kishi new row mai aaunga
+            //waise hi main sum = 0
+            int sum = 0;
+            for(int col = 0; col<n; col++) {
+                int value = arr[row][col];
+                sum = sum + value;
+            }
+            //jab mai saare columns ki value travel and add kar chuka
+            //hounga, tab mere pass sum wale variable
+            //me entire row ka sum ready hoga
+            result.add(sum);
+            }
+        return result;
+        }
 
-    public static void main(int[] args) {
-    int[] arr = {1, 4, 4, 5, 2, 2};
-    List<Integer> frr= Arraypart3.findDisappearedNumber(arr);
+
+        public static List<Integer> colSum(int[][] matrix){
+    //implementation Logc
+    List<Integer> result = new ArrayList<>();
+    int m = matrix.length;
+    int n = matrix[0].length;
+            //Traversal
+            for(int col=0;  col<n; col++){
+                //ye jaise hi mai kishi new column mai aaunga
+                //waie hi sum zero kr dunga
+                int sum = 0;
+                for(int row=0; row<m; row++){
+                    int value = matrix[row][col];
+                    sum = sum + value;
+                }
+                //jaise hi mein ek column me entire traversal karke
+                //sum nikal chuka hounga, tab mein uss sum ko result mai store kr dunga
+                result.add(sum);
+            }
+            return result;
+
+        }
+    public static void main(String[] args) {
+//        int[][] arr = {
+//                {1,2,3},
+//                {4,5,6},
+//                {7,8,9}};
+//        System.out.println("This is 2D array RowSum" +  colSum(arr));
+    int[][] nums = {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}};
+        System.out.println("This is 2D array RowSum" + rowSum(nums));
+//    int[] arr = {1, 4, 4, 5, 2, 2};
+//    int frr=findDisappearedNumber(arr);
 
 
 //        int[] arr = {1, 7, 3, 6, 5, 6};
@@ -262,6 +315,3 @@ public static class Arraypart3 {
 
 //        }
     }
-
-void main() {
-}
