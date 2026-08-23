@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static java.nio.file.Files.find;
 import static java.util.Arrays.sort;
 import static java.util.Collections.max;
 public static class Arraypart3 {
@@ -256,17 +255,77 @@ public static class Arraypart3 {
             return result;
 
         }
+        public static List<Integer> waveMatrixprint(int[][] matrix){
+            List<Integer> result = new ArrayList<>();
+            int m = matrix.length;
+            int n = matrix.length;
+
+            //lets move column wise
+            for(int col=0; col<n; col++){
+                //har ek column index ko check karo even/odd
+                if((col & 1) == 1){
+                    //odd
+                    //bottom to top
+                    for(int row=m-1; row>=0; row--){
+                        result.add(matrix[row][col]);
+                    }
+                }
+                else{
+                    //even
+                    //top to bottom
+                    for(int row=0; row<m; row++){
+                        result.add(matrix[row][col]);
+                    }
+                }
+            }
+            return result;
+        }
+
+        public static int[][] transposeMatrix(int[][] matrix){
+          if(matrix == null || matrix.length == 0){
+              return new int[0][0];
+          }
+          //for original array
+            int totalRows = matrix.length;
+            int totalCols = matrix[0].length;
+            //for new array
+            int newTotalRows = totalCols;
+            int  newtotalCols = totalRows;
+            int ans[][] = new int[newTotalRows][newtotalCols];
+
+            //actual logic
+            for(int i=0; i<totalRows; i++){
+                for(int j=0; j<totalCols; j++){
+                    ans[j][i] = matrix[i][j];
+                }
+            }
+            return ans;
+        }
     public static void main(String[] args) {
+         int[][] arr = {
+                 {10,20,30},
+                 {40,50,60},
+                 {70,80,90}
+         };
+        System.out.println("Transpose of a Matrix :-" + Arrays.deepToString(transposeMatrix(arr)));
+//         int[][] arr = {
+//                 {1,2,3,4},
+//                 {5,6,7,8},
+//                 {9,10,11,12},
+//                 {13,14,15,16}
+//         };
+
+       // System.out.println("That is Wave print a matrix" + waveMatrixprint(arr));
 //        int[][] arr = {
 //                {1,2,3},
 //                {4,5,6},
 //                {7,8,9}};
 //        System.out.println("This is 2D array RowSum" +  colSum(arr));
-    int[][] nums = {
-            {1,2,3},
-            {4,5,6},
-            {7,8,9}};
-        System.out.println("This is 2D array RowSum" + rowSum(nums));
+//    int[][] nums = {
+//            {1,2,3},
+//            {4,5,6},
+//            {7,8,9}};
+//        System.out.println("This is 2D array RowSum" + rowSum(nums));
 //    int[] arr = {1, 4, 4, 5, 2, 2};
 //    int frr=findDisappearedNumber(arr);
 
