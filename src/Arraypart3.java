@@ -280,7 +280,6 @@ public static class Arraypart3 {
             }
             return result;
         }
-
         public static int[][] transposeMatrix(int[][] matrix){
           if(matrix == null || matrix.length == 0){
               return new int[0][0];
@@ -301,13 +300,52 @@ public static class Arraypart3 {
             }
             return ans;
         }
+
+public static void rotate90Clockwise(int[][] matrix, int N){
+    //step-1 rotate Transpose of A matrix
+    //swap mtrix[i][j], matrix[j][i]
+    for(int row=0; row<N; row++){
+        for(int col=row+1; col<N; col++){
+            //swap mtrix[i][j], matrix[j][i]
+            int temp = matrix[row][col];
+            matrix[row][col] = matrix[col][row];
+            matrix[col][row] = temp;
+        }
+    }
+    //step-2 reverse all rows of a matrix
+    //har row pr jaunga and
+    //use reverse kr dunga
+    for(int row=0; row<N; row++){
+        //ab main ek new row par a chuka hu ab reverse kr do
+        int startcol = 0;
+        int endcol = N-1;
+        while(startcol <= endcol){
+            //swap matrix[endcol][startcol], matrix[startcol][endcol]
+            int temp = matrix[row][startcol];
+            matrix[row][startcol] = matrix[row][endcol];
+            matrix[row][endcol] = temp;
+
+            startcol++;
+            endcol--;
+        }
+    }
+}
     public static void main(String[] args) {
-         int[][] arr = {
-                 {10,20,30},
-                 {40,50,60},
-                 {70,80,90}
-         };
-        System.out.println("Transpose of a Matrix :-" + Arrays.deepToString(transposeMatrix(arr)));
+        int[][] arr = {
+                {10,20,30},
+                {40,50,60},
+                {70,80,90}
+        };
+       // System.out.println(rotate90Clockwise(arr, 3));
+
+
+
+//         int[][] arr = {
+//                 {10,20,30},
+//                 {40,50,60},
+//                 {70,80,90}
+//         };
+//        System.out.println("Transpose of a Matrix :-" + Arrays.deepToString(transposeMatrix(arr)));
 //         int[][] arr = {
 //                 {1,2,3,4},
 //                 {5,6,7,8},
