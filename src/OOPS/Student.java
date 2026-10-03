@@ -1,27 +1,66 @@
 package OOPS;
 
 public class Student {
-    String name;
-    int age;
+    private String name;
+    private int age;
 
-    public Student(){
-        this("Golu");
-        System.out.println("Default Constructor!!");
-    }
-    Student(String name, int age){
-        System.out.println("Two Parameter");
+//    public Student(){
+//        this("Golu");
+//        System.out.println("Default Constructor!!");
+//    }
+    public Student(String name, int age){
+//        System.out.println("Two Parameter");
         this.name = name;
         this.age = age;
     }
-    Student(String name) {
-        this("Polu",21);
-        this.name = name;
-        this.age = age;
-        System.out.println("Single Parameter");
+//    Student(String name) {
+//        this("Polu",21);
+//        this.name = name;
+//        this.age = age;
+//        System.out.println("Single Parameter");
+//    }
+
+//    public void print(){
+//        System.out.println(this.name + " - " + this.age);
+//    }
+//}
+
+//    public String getName(){
+//    return this.name;
+//    }
+//
+//    public int getAge(){
+//        return this.age;
+//    }
+//
+//    public void setAge(int age){
+//        this.age = age;
+//    }
+
+
+    public String getName() {
+        return name;
     }
 
-    public void print(){
-        System.out.println(this.name + " - " + this.age);
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if(age < 0) return; //validation
+        this.age = age;
+    }
+
+//    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
 
@@ -29,7 +68,12 @@ public class Student {
 
 class Demo{
     static void main(String[] args) {
-        Student s1 = new Student();
+        Student s1 = new Student("Golu",21);
+        System.out.println(s1);
+//        System.out.println(s1.getName());
+//        System.out.println(s1.getAge());
+//        s1.setAge(88);
+//        System.out.println(s1.getAge());
 
 
 

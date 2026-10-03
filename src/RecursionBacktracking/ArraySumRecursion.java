@@ -49,11 +49,21 @@ public class ArraySumRecursion{
         return n + sum(n - 1);
     }
 
+    static int power(int x, int n){
+        if(n == 0){
+            return 1;
+        }
+        return x * power(x, n - 1);
+    }
+
+
 
     public static void main(String[] args) {
+        System.out.println(power(2,5));
 
-        int ans = sum(5);
-        System.out.println(ans);
+
+//        int ans = sum(5);
+//        System.out.println(ans);
 //        int[] arr = {10, 20, 30, 40, 50};
 //
 //        // Start recursion from index 0
