@@ -56,10 +56,24 @@ public class ArraySumRecursion{
         return x * power(x, n - 1);
     }
 
+    static int reverse(int n, int rev) {
+        if (n == 0) {
+            return rev;
+        }
+
+        int digit = n % 10;
+        rev = rev * 10 + digit;
+
+        return reverse(n / 10, rev);
+    }
+
 
 
     public static void main(String[] args) {
-        System.out.println(power(2,5));
+
+        System.out.println(reverse(1234, 0));
+    }
+//        System.out.println(power(2,5));
 
 
 //        int ans = sum(5);
@@ -84,5 +98,5 @@ public class ArraySumRecursion{
 //        System.out.println("Sum:"+total);
 
     }
-}
+
 
