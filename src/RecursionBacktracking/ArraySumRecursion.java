@@ -75,10 +75,49 @@ public class ArraySumRecursion{
         return 1 + countDigits(n / 10);
     }
 
+    static int max(int[] arr, int index) {
+
+        // Base Case
+        if (index == arr.length - 1) {
+            return arr[index];
+        }
+
+        // Pehle remaining array ka maximum
+        int remainingMax = max(arr, index + 1);
+
+        // Current element aur remaining maximum compare
+        return Math.max(arr[index], remainingMax);
+    }
+
+
+    static boolean isSorted(int[] arr, int index) {
+
+        // Base Case
+        if (index == arr.length - 1) {
+            return true;
+        }
+
+        // Agar current > next hai, array sorted nahi hai
+        if (arr[index] > arr[index + 1]) {
+            return false;
+        }
+
+        return isSorted(arr, index + 1);
+    }
+
 
     public static void main(String[] args) {
 
-        System.out.println(countDigits(12345));
+        int[] arr = {1, 2, 3, 4, 5};
+
+        System.out.println(isSorted(arr, 0));
+
+
+//        int[] arr = {4, 7, 2, 9, 5};
+
+//        System.out.println(max(arr, 0));
+
+//        System.out.println(countDigits(12345));
 
 //        System.out.println(reverse(1234, 0));
     }
